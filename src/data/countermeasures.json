@@ -1,0 +1,82 @@
+{
+  "quests": [
+    {
+      "id": "quest_ared_resistance",
+      "title": "ARED Heavy Resistive Loading",
+      "targetSystem": "musculoskeletal",
+      "category": "exercise",
+      "prescribedFrequency": "daily",
+      "durationMinutes": 60,
+      "description": "High-load axial skeletal compression (Squat, Deadlift, Heel-raise) at 70-85% 1RM to simulate Earth gravitational loading and inhibit osteoclast demineralization.",
+      "shieldContribution": "musculoskeletal",
+      "shieldPoints": 25,
+      "source": "NASA HRP Human Physiology Countermeasures: ARED Flight Protocol (NASA-STD-3001)",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "quest_cevis_cardio",
+      "title": "CEVIS High-Intensity Aerobic Intervals",
+      "targetSystem": "cardiovascular",
+      "category": "exercise",
+      "prescribedFrequency": "daily",
+      "durationMinutes": 45,
+      "description": "Cycle Ergometer with Vibration Isolation and Stabilization (CEVIS) 4x4 interval protocol (4 min at 85% VO2max, 3 min active recovery) to maintain left ventricular volume and stroke volume.",
+      "shieldContribution": "cardiovascular",
+      "shieldPoints": 25,
+      "source": "Hughson RL et al., Cardiovascular deconditioning countermeasures, J Appl Physiol 2016",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "quest_circadian_lighting",
+      "title": "Cabin Circadian Light Phase Alignment",
+      "targetSystem": "central_nervous",
+      "category": "sleep_hygiene",
+      "prescribedFrequency": "daily",
+      "durationMinutes": 30,
+      "description": "Shift cabin Solid-State Light Assemblies (SSLA) to 480nm blue-depleted, red-dominant spectrum (< 2700K, < 10 lux) 2 hours prior to sleep anchor window to trigger endogenous melatonin secretion.",
+      "shieldContribution": "neuro_behavioral",
+      "shieldPoints": 20,
+      "source": "Brainard GC et al., Solid-state lighting countermeasures for ISS crew, Lighting Res Technol 2016",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "quest_fluid_electrolyte",
+      "title": "Cephalad Counter-Fluid & Electrolyte Loading",
+      "targetSystem": "cardiovascular",
+      "category": "hydration",
+      "prescribedFrequency": "daily",
+      "durationMinutes": 15,
+      "description": "Ingest 1.0 liter isotonic electrolyte beverage (8g sodium chloride equivalent) with water to offset spaceflight natriuresis and sustain effective circulating arterial plasma volume.",
+      "shieldContribution": "cardiovascular",
+      "shieldPoints": 15,
+      "source": "NASA Flight Rule MED-B24: Fluid & Electrolyte Loading Protocols; NASA-STD-3001",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "quest_storm_shelter_drill",
+      "title": "Radiation Storm Shelter Staging Drill",
+      "targetSystem": "immune_hematopoietic",
+      "category": "radiation_safety",
+      "prescribedFrequency": "weekly",
+      "durationMinutes": 20,
+      "description": "Verify storm shelter consumables, water-wall polyethylene integrity, and CPDS dosimeter telemetry sync to ensure crew can retreat within 15 minutes of an SPE alarm.",
+      "shieldContribution": "immune",
+      "shieldPoints": 30,
+      "source": "NASA Space Radiation Analysis Group (SRAG) Operational Procedures",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "quest_journal_social",
+      "title": "Neuro-Behavioral Journaling & Earth Connection",
+      "targetSystem": "central_nervous",
+      "category": "mental_health",
+      "prescribedFrequency": "daily",
+      "durationMinutes": 15,
+      "description": "Structured self-reflection or asynchronous audio recording to family/ground support to mitigate sensory deprivation, interpersonal tension, and isolation drift.",
+      "shieldContribution": "neuro_behavioral",
+      "shieldPoints": 20,
+      "source": "Kanas N. et al., Psychological countermeasures for long-duration space missions, Acta Astronautica 2011",
+      "confidence": "high_consensus"
+    }
+  ]
+}

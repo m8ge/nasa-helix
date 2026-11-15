@@ -1,0 +1,119 @@
+{
+  "environments": [
+    {
+      "id": "iss",
+      "name": "International Space Station (ISS)",
+      "location": "Low Earth Orbit (LEO) ~408 km",
+      "gravityG": 0.0,
+      "gravityLabel": "Microgravity (0.00 G)",
+      "nominalCommDelaySeconds": 0.5,
+      "commDelayDisplay": "Real-Time (< 1s)",
+      "radiationLevel": "Moderate (shielded by Earth Magnetosphere, ~0.5 mSv/day)",
+      "hazardWeighting": {
+        "radiation": 0.4,
+        "isolation": 0.6,
+        "distance": 0.2,
+        "altered_gravity": 0.95,
+        "hostile_environment": 0.75
+      },
+      "availableInstruments": [
+        "ARED Heavy Resistance Device",
+        "T2 Colbert Treadmill with harness",
+        "CEVIS Cycle Ergometer",
+        "CBPD Continuous Blood Pressure Cuff",
+        "Bio-Monitor Smart Garment",
+        "Ultrasound 2 Clinical Scanner",
+        "Fundoscope & OCT (SANS)",
+        "Capillary Blood Gas / Glucometer"
+      ],
+      "suggestedRoutineFocus": "Microgravity fluid shift management, daily 2.5h ARED/T2 resistance, real-time Flight Surgeon tele-clinic",
+      "source": "NASA-STD-3001 Vol 1 & 2; ISS Medical Operations Requirements Document (MORD)",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "deep_space_transit",
+      "name": "Deep-Space Transit Vehicle (DSTV)",
+      "location": "Interplanetary Helocentric Trajectory (Earth-Mars Transit)",
+      "gravityG": 0.0,
+      "gravityLabel": "Microgravity (0.00 G)",
+      "nominalCommDelaySeconds": 1274,
+      "commDelayDisplay": "+21m 14s (One-Way Latency)",
+      "radiationLevel": "Critical (Galactic Cosmic Rays + Solar Particle Event risks, ~1.5 mSv/day)",
+      "hazardWeighting": {
+        "radiation": 0.95,
+        "isolation": 0.9,
+        "distance": 1.0,
+        "altered_gravity": 0.95,
+        "hostile_environment": 0.85
+      },
+      "availableInstruments": [
+        "Compact Exploration ARED (c-ARED)",
+        "Mini-CEVIS Ergometer",
+        "Smart Bio-Patch Continuous Telemetry",
+        "Point-of-Care Handheld Hematology & Biochemistry Cartridge",
+        "Silicon Active Radiation Dosimeter (CPDS)",
+        "Compact Ultrasound Probe",
+        "HELIX PVT & Cognitive Assessment Suite"
+      ],
+      "suggestedRoutineFocus": "Autonomous medical stabilization, radiation shelter readiness, sleep debt mitigation, asynchronous clinical logging",
+      "source": "NASA Mars Design Reference Architecture 5.0 (NASA-SP-2009-566); NASA HRP ExMC Gap Analysis",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "lunar_base",
+      "name": "Artemis Lunar Base Camp",
+      "location": "Moon South Pole (Shackleton Crater Rim)",
+      "gravityG": 0.166,
+      "gravityLabel": "Lunar Gravity (0.17 G)",
+      "nominalCommDelaySeconds": 1.3,
+      "commDelayDisplay": "2.6s Round-Trip",
+      "radiationLevel": "High (Lunar surface secondary neutrons + unshielded cosmic rays, ~1.0 mSv/day)",
+      "hazardWeighting": {
+        "radiation": 0.85,
+        "isolation": 0.8,
+        "distance": 0.5,
+        "altered_gravity": 0.8,
+        "hostile_environment": 0.9
+      },
+      "availableInstruments": [
+        "Surface Partial-G Resistance Rig",
+        "Lunar Dust & Regolith Air Toxicity Sensor",
+        "Bio-Telemetry Garment",
+        "Handheld Ultrasound & X-Ray",
+        "Surface EVA Dosimeter",
+        "Point-of-Care Blood Analyzer"
+      ],
+      "suggestedRoutineFocus": "Toxic abrasive regolith dust decontamination, partial-G locomotion transition, 14-day lunar night circadian maintenance",
+      "source": "NASA Artemis Human Landing System Crew Health Specifications; NASA-STD-3001",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "mars_habitat",
+      "name": "Mars Surface Habitat & Rover",
+      "location": "Mars Jezero Crater Outpost",
+      "gravityG": 0.38,
+      "gravityLabel": "Martian Gravity (0.38 G)",
+      "nominalCommDelaySeconds": 840,
+      "commDelayDisplay": "+14m 00s (One-Way Latency)",
+      "radiationLevel": "Moderate-High (Partial atmospheric shielding, ~0.7 mSv/day)",
+      "hazardWeighting": {
+        "radiation": 0.75,
+        "isolation": 0.95,
+        "distance": 1.0,
+        "altered_gravity": 0.7,
+        "hostile_environment": 0.95
+      },
+      "availableInstruments": [
+        "Mars Surface ARED Resistance Frame",
+        "EVA Biometric Suit Telemetry",
+        "Autonomous Medical Kit (ExMC)",
+        "Automated Biochemical Analyzer",
+        "Digital Twin Diagnostics & Surgical Tele-guidance",
+        "Ambient Atmospheric Toxic Dust Monitor"
+      ],
+      "suggestedRoutineFocus": "Autonomous crew health management, 24.6h Martian Sol circadian alignment, EVA physical recovery",
+      "source": "NASA Human Research Roadmap: Risk of Inability to Adequately Treat an Ill or Injured Crew Member",
+      "confidence": "definitive_standard"
+    }
+  ]
+}

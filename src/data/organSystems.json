@@ -1,0 +1,88 @@
+{
+  "organSystems": [
+    {
+      "id": "central_nervous",
+      "name": "Central Nervous & Neuro-Behavioral",
+      "meshTarget": "head",
+      "coordinates": { "x": 0, "y": 1.75, "z": 0 },
+      "primaryHazards": ["isolation", "radiation", "hostile_environment"],
+      "clinicalFunction": "Cognitive processing, alertness, motor coordination, mood stability, and sleep-wake circadian regulation.",
+      "spaceflightImpact": "Sensory deprivation, elevated cabin CO2, and cosmic ray micro-lesions impair cognitive vigilance and increase sleep latency.",
+      "linkedBiomarkers": ["pvtReactionTimeMs", "pvtLapses", "sleepEfficiency", "fatigueScore", "moodValence"],
+      "source": "NASA HRP BHP Element: Risk of Cognitive Impairment & Depression",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "ocular_retina",
+      "name": "Ocular & Optic Nerve (SANS)",
+      "meshTarget": "eyes",
+      "coordinates": { "x": 0, "y": 1.68, "z": 0.12 },
+      "primaryHazards": ["altered_gravity", "radiation"],
+      "clinicalFunction": "Visual acuity, intraocular pressure regulation, and optic disc microcirculation.",
+      "spaceflightImpact": "Cephalad fluid shift causes optic disc edema, globe flattening, choroidal folds, and hyperopic refractive shifts (SANS).",
+      "linkedBiomarkers": ["restingHR", "systolicBP"],
+      "source": "NASA-STD-3001 Vol 1; Lee et al., Spaceflight-Associated Neuro-ocular Syndrome (SANS), JAMA Ophthalmol 2020",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular & Hemodynamic",
+      "meshTarget": "heart",
+      "coordinates": { "x": 0.08, "y": 1.3, "z": 0.08 },
+      "primaryHazards": ["altered_gravity", "radiation"],
+      "clinicalFunction": "Cardiac output, arterial perfusion, baroreflex regulation, and stroke volume adaptation.",
+      "spaceflightImpact": "Loss of hydrostatic pressure gradient leads to reduction in left ventricular mass (~8-10%) and orthostatic intolerance upon re-gravity.",
+      "linkedBiomarkers": ["restingHR", "systolicBP", "diastolicBP"],
+      "source": "NASA HRP Human Physiology Countermeasures: Cardiovascular Risk Profile; Hughson et al., Heart in Space 2018",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory & Gas Exchange",
+      "meshTarget": "lungs",
+      "coordinates": { "x": 0, "y": 1.25, "z": 0 },
+      "primaryHazards": ["hostile_environment"],
+      "clinicalFunction": "Alveolar gas diffusion, arterial oxygen saturation, and acid-base blood homeostasis.",
+      "spaceflightImpact": "Absence of gravity-driven ventilation/perfusion mismatch, but elevated cabin CO2 causes mild chronic hypercapnia and breathing fatigue.",
+      "linkedBiomarkers": ["spO2", "restingHR"],
+      "source": "West JB., Respiratory system under spaceflight conditions, J Appl Physiol 2000; NASA-STD-3001 Vol 2",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "metabolic_gastro",
+      "name": "Metabolic & Gastrointestinal",
+      "meshTarget": "gut",
+      "coordinates": { "x": 0, "y": 0.98, "z": 0.05 },
+      "primaryHazards": ["radiation", "isolation", "hostile_environment"],
+      "clinicalFunction": "Nutrient absorption, glycemic control, gut microbiome homeostasis, and metabolic rate regulation.",
+      "spaceflightImpact": "Microgravity reduces gastrointestinal motility, alters microbiome diversity toward pro-inflammatory clades, and causes insulin resistance.",
+      "linkedBiomarkers": ["bloodGlucose", "bodyMass", "bodyTemp"],
+      "source": "NASA Twins Study: Science 2019; Garrett-Bakelman et al., Microbiome and Metabolic Shifts in Space",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "musculoskeletal",
+      "name": "Musculoskeletal & Bone Architecture",
+      "meshTarget": "bones",
+      "coordinates": { "x": 0, "y": 0.6, "z": 0 },
+      "primaryHazards": ["altered_gravity"],
+      "clinicalFunction": "Structural bone density (trabecular and cortical), postural muscle tone, and joint biomechanics.",
+      "spaceflightImpact": "Absence of skeletal loading induces osteoclast activation with ~1.0-1.5% bone density loss per month in calcaneus and spine, plus postural muscle atrophy.",
+      "linkedBiomarkers": ["bodyMass", "exerciseCompliance"],
+      "source": "NASA HRP Bone Demineralization Risk Standard; Sibonga JD., Astronaut Bone Loss and ARED Countermeasures",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "immune_hematopoietic",
+      "name": "Immune & Hematopoietic System",
+      "meshTarget": "blood",
+      "coordinates": { "x": 0, "y": 0.85, "z": 0 },
+      "primaryHazards": ["radiation", "isolation", "hostile_environment"],
+      "clinicalFunction": "T-cell activation, viral latency containment, leukocyte production, and radioprotection.",
+      "spaceflightImpact": "Cosmic radiation coupled with psychological stress leads to T-cell dysfunction, latent virus reactivation (EBV, VZV), and early space anemia.",
+      "linkedBiomarkers": ["radiationDoseCum", "radiationDailyRate", "bodyTemp"],
+      "source": "Crucian B. et al., Immune System Dysregulation During Spaceflight, Frontiers in Immunology 2018",
+      "confidence": "definitive_standard"
+    }
+  ]
+}

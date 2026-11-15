@@ -1,0 +1,94 @@
+{
+  "hazards": [
+    {
+      "id": "radiation",
+      "name": "Space Radiation",
+      "acronym": "R",
+      "category": "Galactic Cosmic Rays & Solar Particle Events",
+      "description": "High-energy ion ionizing radiation and solar proton flux penetrating shielding, damaging cellular DNA, causing endothelial inflammation, microvascular rarefaction, and acute radiation syndrome risks.",
+      "threatenedSystems": ["immune_hematopoietic", "cardiovascular", "central_nervous", "ocular_retina"],
+      "primaryBiomarkers": ["radiationDoseCum", "radiationDailyRate", "spO2"],
+      "color": "#EF4444",
+      "source": "NASA Human Research Program (HRP) Roadmap: Risk of Radiation Carcinogenesis, CNS and Degenerative Tissue",
+      "confidence": "definitive_standard",
+      "mitigationTactics": [
+        "Relocate to Storm Shelter (water-wall/polyethylene shielded core)",
+        "Administer antioxidant radioprotective countermeasures (vitamin cocktail/antioxidant)",
+        "Postpone all extravehicular activities (EVAs)",
+        "Continuous personal dosimeter monitoring"
+      ]
+    },
+    {
+      "id": "isolation",
+      "name": "Isolation & Confinement",
+      "acronym": "I",
+      "category": "Behavioral Health & Performance",
+      "description": "Extended confinement in small habitations, circadian disruption from absence of natural 24h sunlight, sensory monotony, and communication latency driving neurobehavioral fatigue and sleep architecture deterioration.",
+      "threatenedSystems": ["central_nervous", "sleep_circadian", "cardiovascular"],
+      "primaryBiomarkers": ["sleepHours", "sleepEfficiency", "pvtReactionTimeMs", "pvtLapses", "moodValence", "stressLevel", "fatigueScore"],
+      "color": "#8B5CF6",
+      "source": "NASA HRP Behavioral Health & Performance (BHP) Element; Basner et al., Mars 520 Study",
+      "confidence": "definitive_standard",
+      "mitigationTactics": [
+        "Enforce solid circadian dynamic lighting protocol (blue-enriched daytime, red-shifted evening)",
+        "Structured peer journaling and subjective self-assessment",
+        "Sensory stimulation (virtual reality nature simulations, earth-audio)",
+        "Scheduled mission debriefs and asynchronous family packets"
+      ]
+    },
+    {
+      "id": "distance",
+      "name": "Distance from Earth",
+      "acronym": "D",
+      "category": "Medical Autonomy & Emergency Preparedness",
+      "description": "Vast physical distance causing communication latencies from 2.6 seconds (Moon) up to 44 minutes (Mars opposition), eliminating real-time medical evacuation and ground surgeon telemedicine assistance.",
+      "threatenedSystems": ["all_systems", "central_nervous"],
+      "primaryBiomarkers": ["pvtReactionTimeMs", "stressLevel"],
+      "color": "#00F0FF",
+      "source": "NASA HRP Exploration Medical Capability (ExMC) Element: Autonomous Medical Decision Support Architecture",
+      "confidence": "definitive_standard",
+      "mitigationTactics": [
+        "Execute autonomous Clinical Practice Guidelines (CPGs)",
+        "Utilize digital twin decision support for diagnosis",
+        "Autonomous store-and-forward telemetry buffering with high-priority packets",
+        "Independent emergency medical stabilization protocol execution"
+      ]
+    },
+    {
+      "id": "altered_gravity",
+      "name": "Altered Gravity Fields",
+      "acronym": "G",
+      "category": "Microgravity & Partial Gravity Dynamics",
+      "description": "Zero-G or 0.38-G (Mars) causing cephalad fluid shift (~2L shift from legs to head/thorax), bone mineral density loss (-1.2% per month in trabecular bone), sarcopenia, orthostatic intolerance, and Spaceflight-Associated Neuro-ocular Syndrome (SANS).",
+      "threatenedSystems": ["musculoskeletal", "cardiovascular", "ocular_retina", "neurovestibular"],
+      "primaryBiomarkers": ["bodyMass", "restingHR", "systolicBP", "diastolicBP", "exerciseCompliance"],
+      "color": "#F59E0B",
+      "source": "NASA-STD-3001, Vol 1: Crew Health; NASA HRP Human Physiology Countermeasures Element",
+      "confidence": "definitive_standard",
+      "mitigationTactics": [
+        "Daily 2.5 hour exercise countermeasure regimen (ARED heavy load + CEVIS aerobic)",
+        "Lower Body Negative Pressure (LBNP) fluid-shift reversal sessions",
+        "Fluid and electrolyte loading prior to re-entry or gravity transitions",
+        "Visual acuity and optical coherence tomography (OCT) monitoring for SANS"
+      ]
+    },
+    {
+      "id": "hostile_environment",
+      "name": "Hostile Closed Environment",
+      "acronym": "E",
+      "category": "ECLSS, Acoustics & Microbiome",
+      "description": "Artificial atmospheric containment characterized by elevated ambient CO2 levels (often 3-4 mmHg vs 0.3 mmHg on Earth), toxic trace contaminants, acoustic noise from pumps/fans, and altered microbial ecology.",
+      "threatenedSystems": ["respiratory", "central_nervous", "immune_hematopoietic"],
+      "primaryBiomarkers": ["spO2", "bodyTemp", "restingHR", "bloodGlucose"],
+      "color": "#10B981",
+      "source": "NASA-STD-3001, Vol 2: Habitat Environments and ECLSS Specification; Law et al., Spaceflight Hypercapnia Review",
+      "confidence": "definitive_standard",
+      "mitigationTactics": [
+        "ECLSS scrubber rate ramp-up to suppress partial pressure of CO2 (< 2.0 mmHg)",
+        "HEPA air filtration and airborne particulate monitoring",
+        "Active acoustic noise-cancelling headset protocol during sleep periods",
+        "Surface microbiological sanitation with space-approved quaternary biocides"
+      ]
+    }
+  ]
+}

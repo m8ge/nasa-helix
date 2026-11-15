@@ -1,0 +1,361 @@
+{
+  "metrics": [
+    {
+      "id": "restingHR",
+      "name": "Resting Heart Rate",
+      "unit": "bpm",
+      "category": "cardiovascular",
+      "populationEnvelope": { "minSafety": 45, "maxSafety": 105, "optimalMin": 55, "optimalMax": 85 },
+      "spaceflightShift": {
+        "expectedDelta": -5,
+        "explanation": "Microgravity removes the 2-meter hydrostatic hydrostatic pressure column on Earth, initially reducing cardiac sympathetic tone and resulting in a 4-8 bpm lower baseline in trained astronauts."
+      },
+      "whatItIs": "The frequency of myocardial contractions during complete physical rest, reflecting autonomic nervous system tone and cardiovascular conditioning.",
+      "whyItMatters": "Elevated resting HR in space indicates autonomic exhaustion, cardiac deconditioning, acute infection, or excessive cumulative fatigue.",
+      "linkedHazard": "altered_gravity",
+      "onboardMeasurement": {
+        "device": "Bio-Monitor Smart Shirt or Continuous Blood Pressure Device (CBPD) sensor patch",
+        "howToMeasure": "Remain seated or tethered in sleep station for 5 minutes. Breathe regularly without speaking while sensor records 120-second resting baseline."
+      },
+      "escalationCriteria": "Drift > 12 bpm above personal baseline for 3 consecutive days, or resting HR > 105 bpm without exertion.",
+      "source": "NASA-STD-3001, Vol 1, Rev B; Charles JB et al., Cardiovascular physiology in microgravity",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "systolicBP",
+      "name": "Systolic Blood Pressure",
+      "unit": "mmHg",
+      "category": "cardiovascular",
+      "populationEnvelope": { "minSafety": 90, "maxSafety": 140, "optimalMin": 105, "optimalMax": 125 },
+      "spaceflightShift": {
+        "expectedDelta": -4,
+        "explanation": "Loss of gravitational pooling reduces lower-body blood pooling and alters central baroreceptor setpoint."
+      },
+      "whatItIs": "Peak pressure exerted against systemic arterial walls during ventricular systole.",
+      "whyItMatters": "Hypotension increases risk of syncopal episodes in microgravity and during G-transitions; hypertension accelerates SANS optic disc edema.",
+      "linkedHazard": "altered_gravity",
+      "onboardMeasurement": {
+        "device": "Continuous Blood Pressure Device (CBPD) finger cuff / oscillometric arm cuff",
+        "howToMeasure": "Apply pneumatic cuff to upper left arm at heart level. Calibrate zero-point with finger sensor, sit relaxed for 3 deflation cycles."
+      },
+      "escalationCriteria": "Systolic BP > 145 mmHg or < 85 mmHg with orthostatic dizziness.",
+      "source": "NASA-STD-3001, Vol 1; Norsk P., Blood Pressure Regulation in Space, Front Physiol 2020",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "diastolicBP",
+      "name": "Diastolic Blood Pressure",
+      "unit": "mmHg",
+      "category": "cardiovascular",
+      "populationEnvelope": { "minSafety": 60, "maxSafety": 90, "optimalMin": 65, "optimalMax": 80 },
+      "spaceflightShift": {
+        "expectedDelta": -2,
+        "explanation": "Peripheral vascular resistance declines slightly as vascular smooth muscle adapts to constant non-gravitational flow."
+      },
+      "whatItIs": "Minimum arterial pressure during ventricular diastole and cardiac refilling.",
+      "whyItMatters": "Reflects systemic vascular resistance; sustained elevations impair cerebral autoregulation.",
+      "linkedHazard": "altered_gravity",
+      "onboardMeasurement": {
+        "device": "Oscillometric arm cuff or CBPD continuous sensor",
+        "howToMeasure": "Measured concurrently during automated systolic cuff inflation cycle."
+      },
+      "escalationCriteria": "Diastolic BP > 95 mmHg or < 55 mmHg.",
+      "source": "NASA-STD-3001 Vol 1: Clinical Range Standards",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "bodyTemp",
+      "name": "Core Body Temperature",
+      "unit": "°C",
+      "category": "metabolic_gastro",
+      "populationEnvelope": { "minSafety": 35.8, "maxSafety": 38.0, "optimalMin": 36.4, "optimalMax": 37.3 },
+      "spaceflightShift": {
+        "expectedDelta": 0.8,
+        "explanation": "Spaceflight Space Fever phenomenon: Reduced evaporative convective cooling in closed air currents and inflammatory vascular response raises resting core temperature by approximately 0.5-1.0°C."
+      },
+      "whatItIs": "Deep visceral internal temperature measured through tympanic or infrared temporal artery sensors.",
+      "whyItMatters": "Hyperthermia degrades cognitive performance and increases metabolic expenditure; rapid elevations indicate systemic infection.",
+      "linkedHazard": "hostile_environment",
+      "onboardMeasurement": {
+        "device": "Double-sensor forehead heat-flux thermometer or tympanic IR probe",
+        "howToMeasure": "Place dual-sensor patch flush against forehead midpoint or insert sanitized tympanic probe into auditory canal."
+      },
+      "escalationCriteria": "Core temp > 38.2°C (>100.8°F) or rapid drift > 1.2°C above personal baseline within 12 hours.",
+      "source": "Stahn AC et al., Increased core body temperature in astronauts ('Space Fever'), Scientific Reports 2017",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "bloodGlucose",
+      "name": "Fasting Blood Glucose",
+      "unit": "mg/dL",
+      "category": "metabolic_gastro",
+      "populationEnvelope": { "minSafety": 70, "maxSafety": 140, "optimalMin": 75, "optimalMax": 105 },
+      "spaceflightShift": {
+        "expectedDelta": 10,
+        "explanation": "Microgravity induces insulin resistance due to physical inactivity of postural muscle groups and cortisol stress fluctuations."
+      },
+      "whatItIs": "Serum glucose concentration following an overnight fast or standardized caloric intake.",
+      "whyItMatters": "Elevated glucose indicates metabolic dysregulation and glycation risks; hypoglycemia causes acute disorientation and tremor.",
+      "linkedHazard": "hostile_environment",
+      "onboardMeasurement": {
+        "device": "Onboard Point-of-Care Capillary Glucometer or Continuous Glucose Monitor (CGM)",
+        "howToMeasure": "Cleanse fingertip with alcohol pad, activate sterile lancet, apply micro-droplet to test strip loaded in cartridge reader."
+      },
+      "escalationCriteria": "Fasting glucose > 145 mg/dL or < 65 mg/dL with adrenergic symptoms.",
+      "source": "NASA Twins Study (Garrett-Bakelman et al., Science 2019); NASA-STD-3001 Vol 1",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "sleepHours",
+      "name": "Sleep Duration",
+      "unit": "hrs",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 6.0, "maxSafety": 9.5, "optimalMin": 7.0, "optimalMax": 8.5 },
+      "spaceflightShift": {
+        "expectedDelta": -1.2,
+        "explanation": "Astronauts historically average 6.0-6.4 hours of sleep per 24-hour cycle due to circadian disruption, noise, and sleep cabin micro-movements."
+      },
+      "whatItIs": "Total objectively recorded sleep time per 24-hour crew circadian rest period.",
+      "whyItMatters": "Cumulative sleep debt impairs operational vigilance, slows reaction time, and triggers psychiatric instability.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "Actiwatch Sleep Logger & Smart Bio-Mattress Sensor",
+        "howToMeasure": "Wear tri-axial actigraphy wrist unit continuous across sleep period; log subjective sleep onset/offset in morning check-in."
+      },
+      "escalationCriteria": "Cumulative sleep debt > 8 hours over rolling 5-day window, or single sleep period < 4.5 hours.",
+      "source": "Barger LK et al., Prevalence of sleep deficiency in astronauts, Lancet Neurology 2014; NASA-STD-3001",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "sleepEfficiency",
+      "name": "Sleep Efficiency",
+      "unit": "%",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 75, "maxSafety": 100, "optimalMin": 85, "optimalMax": 95 },
+      "spaceflightShift": {
+        "expectedDelta": -8,
+        "explanation": "Microgravity eliminates mattress contact pressure points; micro-awakenings are frequent from air current fluctuations and tether adjustments."
+      },
+      "whatItIs": "Percentage of total time in bed spent in actual restorative sleep (Stage N2, N3 slow-wave, and REM).",
+      "whyItMatters": "Low sleep efficiency indicates restless sleep, REM fragmentation, and failure of cognitive recovery.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "Actigraphy sensor algorithm cross-referenced with EEG headband (Dreem/SleepView)",
+        "howToMeasure": "Headband electrode array automatically syncs sleep architecture stages to HELIX upon waking."
+      },
+      "escalationCriteria": "Sleep efficiency < 70% for 3 consecutive nights.",
+      "source": "NASA HRP BHP Sleep Architecture Findings; Dijk DJ et al., Sleep and circadian rhythms in spaceflight",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "spO2",
+      "name": "Oxygen Saturation (SpO2)",
+      "unit": "%",
+      "category": "respiratory",
+      "populationEnvelope": { "minSafety": 94, "maxSafety": 100, "optimalMin": 96, "optimalMax": 99 },
+      "spaceflightShift": {
+        "expectedDelta": 0,
+        "explanation": "Habitat ECLSS maintains nominal 21% O2 at 101.3 kPa (or 30% O2 at 56 kPa in exploration atmospheres), so SpO2 should remain normoxic."
+      },
+      "whatItIs": "Percentage of oxygen-saturated hemoglobin relative to total hemoglobin in arterial blood.",
+      "whyItMatters": "Drops indicate ECLSS partial pressure failure, smoke/trace contaminant inhalation, or pulmonary edema.",
+      "linkedHazard": "hostile_environment",
+      "onboardMeasurement": {
+        "device": "Transmittance Pulse Oximeter finger probe or optical wrist sensor",
+        "howToMeasure": "Attach sensor to index finger, rest arm, record stable plethysmographic waveform for 30 seconds."
+      },
+      "escalationCriteria": "SpO2 < 93% on ambient air without rapid recovery.",
+      "source": "NASA-STD-3001 Vol 2: ECLSS Normative Gas Partial Pressures",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "bodyMass",
+      "name": "Body Mass",
+      "unit": "kg",
+      "category": "musculoskeletal",
+      "populationEnvelope": { "minSafety": 65, "maxSafety": 85, "optimalMin": 70, "optimalMax": 80 },
+      "spaceflightShift": {
+        "expectedDelta": -2.5,
+        "explanation": "Immediate 2-3 kg fluid loss occurs within initial 72 hours due to cephalad shift and natriuretic diuresis; subsequent slow loss reflects caloric deficit and muscle atrophy."
+      },
+      "whatItIs": "Physical inertial mass of the astronaut measured via linear acceleration physics.",
+      "whyItMatters": "Unintended body mass loss > 5% indicates nutritional deficit, bone/muscle breakdown, or inadequate hydration.",
+      "linkedHazard": "altered_gravity",
+      "onboardMeasurement": {
+        "device": "Space Linear Acceleration Mass Measurement Device (SLAMD)",
+        "howToMeasure": "Attach chest harness to SLAMD spring arm. Release catch and remain completely rigid while device measures oscillation frequency ($T = 2\\pi\\sqrt{m/k}$)."
+      },
+      "escalationCriteria": "Loss of > 4.0 kg from baseline within 14 days, or progressive continuous downward slope.",
+      "source": "NASA HRP Nutrition and Physiology Evidence Book; Thornton WE., SLAMD calibration standards",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "radiationDoseCum",
+      "name": "Cumulative Radiation Exposure",
+      "unit": "mSv",
+      "category": "immune_hematopoietic",
+      "populationEnvelope": { "minSafety": 0, "maxSafety": 600, "optimalMin": 0, "optimalMax": 200 },
+      "spaceflightShift": {
+        "expectedDelta": 150,
+        "explanation": "Deep space transit vehicles receive ~1.5 mSv/day from Galactic Cosmic Rays (GCR), reaching ~270 mSv over a 180-day transit."
+      },
+      "whatItIs": "Total career mission absorbed equivalent radiation dose in millisieverts.",
+      "whyItMatters": "Permissible Career Limits (NASA standard: 600 mSv universal career limit for 3% Risk of Exposure-Induced Death from cancer).",
+      "linkedHazard": "radiation",
+      "onboardMeasurement": {
+        "device": "Personal Active Radiation Dosimeter (CPDS / Crew Passive Dosimeter badge)",
+        "howToMeasure": "Insert personal dosimeter into optical docking bay on telemetry console for digital read-out sync."
+      },
+      "escalationCriteria": "Cumulative dose approaching 450 mSv or daily rate spike > 15 mSv/day (indicates active Solar Particle Event).",
+      "source": "NASA-STD-3001 Vol 1: Radiation Permissible Exposure Limits (PEL); NCRP Report No. 153",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "radiationDailyRate",
+      "name": "Daily Radiation Dose Rate",
+      "unit": "mSv/day",
+      "category": "immune_hematopoietic",
+      "populationEnvelope": { "minSafety": 0.2, "maxSafety": 5.0, "optimalMin": 0.8, "optimalMax": 2.0 },
+      "spaceflightShift": {
+        "expectedDelta": 1.2,
+        "explanation": "Baseline GCR rate in interplanetary transit is 1.2-1.8 mSv/day depending on solar cycle modulation."
+      },
+      "whatItIs": "Instantaneous rate of ionizing radiation absorbed over a 24-hour period.",
+      "whyItMatters": "Acute spikes indicate a Solar Particle Event (SPE) coronal mass ejection requiring emergency storm shelter retreat.",
+      "linkedHazard": "radiation",
+      "onboardMeasurement": {
+        "device": "Vehicle Radiation Environment Monitor (VREM) / Silicon Solid-State Dosimeter",
+        "howToMeasure": "Continuous autonomous telemetry broadcast synced to HELIX bus."
+      },
+      "escalationCriteria": "Rate > 5.0 mSv/day triggers AMBER alert; rate > 20 mSv/day triggers RED emergency storm shelter alarm.",
+      "source": "NASA HRP Space Radiation Health Project Guidelines; Cucinotta FA et al.",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "pvtReactionTimeMs",
+      "name": "Cognitive PVT Reaction Time",
+      "unit": "ms",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 180, "maxSafety": 380, "optimalMin": 190, "optimalMax": 260 },
+      "spaceflightShift": {
+        "expectedDelta": 20,
+        "explanation": "Initial spaceflight causes mild cognitive slowing (+15-25ms) due to neurovestibular adaptation and visual saccade adjustments."
+      },
+      "whatItIs": "Median visual response latency measured during a calibrated Psychomotor Vigilance Task test.",
+      "whyItMatters": "Slowing reaction time directly correlates with operational error rate, docking failures, and cognitive micro-sleeps.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "HELIX In-App 60-Second PVT Micro-Test Deck",
+        "howToMeasure": "Focus on central visual counter. Press Spacebar or touch trigger immediately upon visual millisecond increment. 60-second duration."
+      },
+      "escalationCriteria": "Median reaction time > 320 ms or drift > 45 ms above personal baseline.",
+      "source": "Basner M & Dinges DF., Psychomotor Vigilance Test in Operational Settings, Aerospace Med 2011; NASA HRP",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "pvtLapses",
+      "name": "PVT Attentional Lapses",
+      "unit": "count",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 0, "maxSafety": 4, "optimalMin": 0, "optimalMax": 1 },
+      "spaceflightShift": {
+        "expectedDelta": 1,
+        "explanation": "Sleep fragmentation increases brief attentional state instability lapses (>500ms)."
+      },
+      "whatItIs": "Number of reaction failures where response exceeded 500 milliseconds during a PVT session.",
+      "whyItMatters": "Lapses indicate momentary neurobehavioral micro-sleeps where situational awareness is completely lost.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "HELIX In-App PVT Engine",
+        "howToMeasure": "Counted automatically during the 60-second micro-test."
+      },
+      "escalationCriteria": ">= 3 lapses in a single 60-second session.",
+      "source": "Dinges DF et al., Operational Fatigue and Vigilance Impairment, Sleep 1997",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "moodValence",
+      "name": "Mood & Emotional Valence",
+      "unit": "score (1-5)",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 2.5, "maxSafety": 5.0, "optimalMin": 3.5, "optimalMax": 5.0 },
+      "spaceflightShift": {
+        "expectedDelta": -0.5,
+        "explanation": "Third-quarter phenomenon: Long-duration crews typically experience lower emotional valence around midpoint of mission."
+      },
+      "whatItIs": "Self-reported emotional positivity and subjective affective state (1 = Severely Low, 5 = Highly Positive).",
+      "whyItMatters": "Sustained dysphoria predicts crew conflict, withdrawal, and clinical depression in extreme isolation.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "HELIX 5-Tap Behavioral Check-In Screen",
+        "howToMeasure": "Select visual analog scale representing current emotional state upon waking."
+      },
+      "escalationCriteria": "Score <= 2.0 for 4 consecutive days.",
+      "source": "Kanas N. et al., Behavioral issues with crewmembers in space, Aviat Space Environ Med 2009",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "stressLevel",
+      "name": "Perceived Stress Level",
+      "unit": "score (1-5)",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 1.0, "maxSafety": 3.8, "optimalMin": 1.0, "optimalMax": 2.5 },
+      "spaceflightShift": {
+        "expectedDelta": 0.5,
+        "explanation": "High workload, tight mission timelines, and operational hazards create elevated background acute stress."
+      },
+      "whatItIs": "Subjective perception of cognitive overload and acute psychological tension (1 = Relaxed, 5 = Overwhelmed).",
+      "whyItMatters": "Chronic stress accelerates cardiovascular dysregulation and suppresses cell-mediated immunity.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "HELIX 5-Tap Behavioral Check-In Screen",
+        "howToMeasure": "Rate mental tension and operational overwhelm during morning or evening log."
+      },
+      "escalationCriteria": "Stress score >= 4.0 for 3 consecutive days.",
+      "source": "NASA HRP BHP Risk of Adverse Cognitive and Behavioral Conditions",
+      "confidence": "high_consensus"
+    },
+    {
+      "id": "fatigueScore",
+      "name": "Physical & Mental Fatigue",
+      "unit": "score (1-5)",
+      "category": "central_nervous",
+      "populationEnvelope": { "minSafety": 1.0, "maxSafety": 3.5, "optimalMin": 1.0, "optimalMax": 2.0 },
+      "spaceflightShift": {
+        "expectedDelta": 0.6,
+        "explanation": "Constant exertion from 2.5h daily exercise plus sleep disruption creates baseline physical fatigue."
+      },
+      "whatItIs": "Subjective rating of physical exhaustion and lack of vital energy (1 = Energized, 5 = Exhausted).",
+      "whyItMatters": "High fatigue increases musculoskeletal injury risk on ARED and reduces EVA safety margins.",
+      "linkedHazard": "isolation",
+      "onboardMeasurement": {
+        "device": "HELIX 5-Tap Behavioral Check-In Screen",
+        "howToMeasure": "Rate physical vitality upon completing daily operational schedule."
+      },
+      "escalationCriteria": "Fatigue >= 4.0 combined with PVT reaction time > 300 ms.",
+      "source": "Samn-Perelli Fatigue Scale adapted for NASA Exploration Class missions",
+      "confidence": "definitive_standard"
+    },
+    {
+      "id": "exerciseCompliance",
+      "name": "Countermeasure Exercise Compliance",
+      "unit": "%",
+      "category": "musculoskeletal",
+      "populationEnvelope": { "minSafety": 80, "maxSafety": 100, "optimalMin": 90, "optimalMax": 100 },
+      "spaceflightShift": {
+        "expectedDelta": 0,
+        "explanation": "NASA mission flight rules mandate 100% adherence to prescribed 2.5h daily exercise countermeasures (ARED + CEVIS)."
+      },
+      "whatItIs": "Percentage of prescribed daily load-volume and aerobic duration completed on ARED and cycle ergometer.",
+      "whyItMatters": "Skipping exercise causes rapid bone density loss (-1% per 30 days) and cardiovascular deconditioning.",
+      "linkedHazard": "altered_gravity",
+      "onboardMeasurement": {
+        "device": "ARED (Advanced Resistive Exercise Device) Load Telemetry and CEVIS Wattmeter",
+        "howToMeasure": "Data stream logged automatically via Bluetooth/RS-422 telemetry from exercise console into HELIX."
+      },
+      "escalationCriteria": "Compliance < 75% over a 7-day rolling window.",
+      "source": "NASA Flight Rule B13-105: Crew Countermeasure Exercise Requirements; NASA-STD-3001",
+      "confidence": "definitive_standard"
+    }
+  ]
+}

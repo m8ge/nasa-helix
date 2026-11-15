@@ -1,0 +1,120 @@
+{
+  "astronaut": {
+    "id": "ASTRO-074-ER",
+    "callsign": "Ares-Lead",
+    "fullName": "Commander Elena Rostova, Ph.D.",
+    "role": "Mission Commander & Systems Engineer",
+    "mission": "Ares-V Interplanetary Transit to Mars",
+    "spacecraft": "Deep-Space Transit Vehicle (DSTV Endeavour II)",
+    "currentMissionDay": 74,
+    "totalMissionDays": 180,
+    "age": 38,
+    "bloodType": "A Positive",
+    "baselines": {
+      "restingHR": {
+        "preFlightMean": 58.0,
+        "preFlightStdDev": 2.4,
+        "flightAdaptationMean": 54.0,
+        "flightAdaptationStdDev": 2.8
+      },
+      "systolicBP": {
+        "preFlightMean": 114.0,
+        "preFlightStdDev": 4.2,
+        "flightAdaptationMean": 110.0,
+        "flightAdaptationStdDev": 4.5
+      },
+      "diastolicBP": {
+        "preFlightMean": 72.0,
+        "preFlightStdDev": 3.1,
+        "flightAdaptationMean": 68.0,
+        "flightAdaptationStdDev": 3.4
+      },
+      "bodyTemp": {
+        "preFlightMean": 36.6,
+        "preFlightStdDev": 0.2,
+        "flightAdaptationMean": 37.1,
+        "flightAdaptationStdDev": 0.25
+      },
+      "bloodGlucose": {
+        "preFlightMean": 88.0,
+        "preFlightStdDev": 5.0,
+        "flightAdaptationMean": 98.0,
+        "flightAdaptationStdDev": 6.2
+      },
+      "sleepHours": {
+        "preFlightMean": 7.6,
+        "preFlightStdDev": 0.4,
+        "flightAdaptationMean": 6.5,
+        "flightAdaptationStdDev": 0.6
+      },
+      "sleepEfficiency": {
+        "preFlightMean": 92.0,
+        "preFlightStdDev": 3.0,
+        "flightAdaptationMean": 84.0,
+        "flightAdaptationStdDev": 4.2
+      },
+      "spO2": {
+        "preFlightMean": 98.6,
+        "preFlightStdDev": 0.5,
+        "flightAdaptationMean": 98.0,
+        "flightAdaptationStdDev": 0.6
+      },
+      "bodyMass": {
+        "preFlightMean": 68.4,
+        "preFlightStdDev": 0.5,
+        "flightAdaptationMean": 66.1,
+        "flightAdaptationStdDev": 0.6
+      },
+      "pvtReactionTimeMs": {
+        "preFlightMean": 218.0,
+        "preFlightStdDev": 12.0,
+        "flightAdaptationMean": 234.0,
+        "flightAdaptationStdDev": 15.0
+      },
+      "pvtLapses": {
+        "preFlightMean": 0.1,
+        "preFlightStdDev": 0.3,
+        "flightAdaptationMean": 0.4,
+        "flightAdaptationStdDev": 0.5
+      },
+      "radiationDoseCum": {
+        "preFlightMean": 0.0,
+        "preFlightStdDev": 0.0,
+        "flightAdaptationMean": 18.0,
+        "flightAdaptationStdDev": 2.0
+      },
+      "radiationDailyRate": {
+        "preFlightMean": 0.01,
+        "preFlightStdDev": 0.005,
+        "flightAdaptationMean": 1.45,
+        "flightAdaptationStdDev": 0.2
+      },
+      "moodValence": {
+        "preFlightMean": 4.6,
+        "preFlightStdDev": 0.3,
+        "flightAdaptationMean": 4.1,
+        "flightAdaptationStdDev": 0.4
+      },
+      "stressLevel": {
+        "preFlightMean": 1.5,
+        "preFlightStdDev": 0.4,
+        "flightAdaptationMean": 2.2,
+        "flightAdaptationStdDev": 0.5
+      },
+      "fatigueScore": {
+        "preFlightMean": 1.3,
+        "preFlightStdDev": 0.3,
+        "flightAdaptationMean": 2.1,
+        "flightAdaptationStdDev": 0.5
+      },
+      "exerciseCompliance": {
+        "preFlightMean": 98.0,
+        "preFlightStdDev": 2.0,
+        "flightAdaptationMean": 95.0,
+        "flightAdaptationStdDev": 4.0
+      }
+    },
+    "source": "NASA Astronaut Health Record Prototype (NASA-STD-3001)",
+    "confidence": "definitive_standard"
+  }
+}
